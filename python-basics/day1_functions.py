@@ -38,7 +38,17 @@ def palindrome(s):
                return False
      return True
           
-          
+# ---- Exercise 6: Common elements in two lists ----
+def common_elements(l1, l2):
+     common_list = []
+     for i in range(len(l1)):
+          for j in range(len(l2)):
+               if l1[i] == l2[j]:
+                    common_list.append(l1[i])
+     return common_list
+
+
+
 
 
      
@@ -52,3 +62,5 @@ if __name__ == "__main__":
     print("Exercise4_output:", even([1, 2, 3, 4, 5, 6]))
     print("Exercise5_output:", palindrome("racecar"))
     print("Exercise5_output:", palindrome("hello"))
+    print("Exercise6_output:", common_elements([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
+
