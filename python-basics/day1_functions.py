@@ -47,7 +47,15 @@ def common_elements(l1, l2):
                     common_list.append(l1[i])
      return common_list
 
-
+# ---- Exercise 7: Sort a list in ascending order ----
+def sort_ascending(nums):
+     for i in range(len(nums)):
+          for j in range(i+1, len(nums)):
+               if nums[i] > nums[j]:
+                   temp = nums[i]
+                   nums[i] = nums[j]
+                   nums[j] = temp
+     return nums
 
 
 
@@ -63,4 +71,6 @@ if __name__ == "__main__":
     print("Exercise5_output:", palindrome("racecar"))
     print("Exercise5_output:", palindrome("hello"))
     print("Exercise6_output:", common_elements([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
+    print("Exercise7_output:", sort_ascending([5, 3, 8, 1, 9, 2]))
+  
 
