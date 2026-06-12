@@ -57,6 +57,16 @@ def sort_ascending(nums):
                    nums[j] = temp
      return nums
 
+# ---- Exercise 8: Count each character in a string ----
+def count_char(s):
+    output_dict = {}
+    for i in range(len(s)):
+        if s[i] in output_dict:
+            output_dict[s[i]] += 1
+        else:
+            output_dict[s[i]] = 1
+    return output_dict
+
 
 
      
@@ -72,5 +82,7 @@ if __name__ == "__main__":
     print("Exercise5_output:", palindrome("hello"))
     print("Exercise6_output:", common_elements([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
     print("Exercise7_output:", sort_ascending([5, 3, 8, 1, 9, 2]))
+    print("Exercise8_output:", count_char("hello"))
+
   
 
