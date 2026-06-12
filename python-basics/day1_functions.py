@@ -23,6 +23,24 @@ def string_reverser(s):
           reversed_string += s[i]
      return reversed_string
 
+# ---- Exercise 4: Even number  ----
+def even(nums):
+     even_list = []
+     for i in range(len(nums)):
+          if nums[i] % 2 == 0:
+               even_list.append(nums[i])
+     return even_list
+
+# ---- Exercise 5: palindrome  ----
+def palindrome(s):
+     for i in range(len(s)//2):
+          if s[i] != s[-i-1]:
+               return False
+     return True
+          
+          
+
+
      
 
 
@@ -31,3 +49,6 @@ if __name__ == "__main__":
     print("Exercise1_output:", average([10, 20, 30]))
     print("Exercise2_output:", find_max([3, 7, 2, 9, 1]))
     print("Exercise3_output:", string_reverser("hello"))
+    print("Exercise4_output:", even([1, 2, 3, 4, 5, 6]))
+    print("Exercise5_output:", palindrome("racecar"))
+    print("Exercise5_output:", palindrome("hello"))
