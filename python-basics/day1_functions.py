@@ -67,6 +67,34 @@ def count_char(s):
             output_dict[s[i]] = 1
     return output_dict
 
+# ---- Exercise 8b: Check for duplicates in a list ----
+def duplicates_check(s):
+     temp_dict = {}
+     for i in range(len(s)):
+          if s[i] in temp_dict: 
+               return True
+          else:
+               temp_dict[s[i]] = 1
+     return False
+     
+# ---- Exercise 8c: Find first non-repeated character in a string ----
+def nonrepeated(s):
+     dict = {}
+     for i in range(len(s)):
+          if s[i] in dict:
+               dict[s[i]] += 1
+          else:
+               dict[s[i]] = 1
+     for key in dict:
+               if dict[key] == 1:
+                    return key
+     
+     
+
+
+
+
+
 
 
      
@@ -83,6 +111,11 @@ if __name__ == "__main__":
     print("Exercise6_output:", common_elements([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
     print("Exercise7_output:", sort_ascending([5, 3, 8, 1, 9, 2]))
     print("Exercise8_output:", count_char("hello"))
+    print("Exercise8b_output:", duplicates_check([1, 2, 3, 4, 2]))
+    print("Exercise8b_output:", duplicates_check([1, 2, 3, 4, 5]))
+    print("Exercise8c_output:", nonrepeated("aabbcde"))
+
+
 
   
 
