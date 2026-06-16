@@ -92,13 +92,23 @@ def nonrepeated(s):
  # ---- Exercise 9: Group words by their first letter ----
 def group_by_first_letter(words):
      dict = {}
-     for word in (words):
+     for word in words:
            if word[0] in dict:
                 dict[word[0]].append(word)  
            else:
                 dict[word[0]] = [word]
      return dict
 
+# ---- Exercise 10: Count word frequency in a sentence ----
+def word_counter(s):
+     dict= {}
+     words = s.split()
+     for word in words:
+          if word in dict:
+               dict[word] += 1
+          else:
+               dict[word] = 1
+     return dict
 
 
 
@@ -119,6 +129,7 @@ if __name__ == "__main__":
     print("Exercise8b_output:", duplicates_check([1, 2, 3, 4, 5]))
     print("Exercise8c_output:", nonrepeated("aabbcde"))
     print("Exercise9_output:", group_by_first_letter(["apple", "banana", "avocado", "blueberry", "cherry"]))
+    print("Exercise10_output:", word_counter("the cat sat on the mat the cat"))
 
 
 
