@@ -89,7 +89,7 @@ def nonrepeated(s):
                if dict[key] == 1:
                     return key
      
- # ---- Exercise 9: Group words by their first letter ----
+# ---- Exercise 9: Group words by their first letter ----
 def group_by_first_letter(words):
      dict = {}
      for word in words:
@@ -126,7 +126,36 @@ def two_sum_hash(nums, target):
                return [number, number2]
           else:
                dict[number] = 1 
-            
+
+# ---- Exercise 12: Find the most frequent element in a list ----
+def most_frequent(nums):
+     dict = {}
+     max_count = 0 
+     max_key = None
+     for number in nums:
+          if number in dict:
+               dict[number] += 1
+          else:
+               dict[number] = 1             
+     for key in dict:
+          if max_count < dict[key]:
+               max_count = dict[key]
+               max_key = key
+     return max_key
+
+# ---- Exercise 13: FizzBuzz ----
+def fizzbuzz(n):
+     result = []
+     for value in range(1,n+1):
+          if value % 3 == 0 and value % 5 == 0:
+               result.append("FizzBuzz")
+          elif value % 3 == 0:
+               result.append("Fizz")
+          elif value % 5 == 0:
+               result.append("Buzz")
+          else:
+               result.append(value)
+     return result
 
 
 
@@ -148,6 +177,9 @@ if __name__ == "__main__":
     print("Exercise10_output:", word_counter("the cat sat on the mat the cat"))
     print("Exercise11_output:", two_sum([2, 7, 11, 15], 9))
     print("Exercise11b_output:", two_sum_hash([2, 7, 11, 15], 9))
+    print("Exercise12_output:", most_frequent([1, 3, 2, 3, 4, 3, 2]))
+    print("Exercise13_output:", fizzbuzz(15))
+
 
 
 
