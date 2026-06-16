@@ -110,7 +110,23 @@ def word_counter(s):
                dict[word] = 1
      return dict
 
-
+# ---- Exercise 11: Find two numbers that add up to a target ----
+def two_sum(nums, target):
+     for i in range(len(nums)-1):
+          for j in range(i+1, len(nums)):
+               if nums[i] + nums[j] == target:
+                    return [nums[i] , nums[j]]
+                    
+# ---- Exercise 11b: Two sum using hash map ----
+def two_sum_hash(nums, target):
+     dict = {}
+     for number in nums:
+          number2 = target - number
+          if number2 in dict:
+               return [number, number2]
+          else:
+               dict[number] = 1 
+            
 
 
 
@@ -130,6 +146,8 @@ if __name__ == "__main__":
     print("Exercise8c_output:", nonrepeated("aabbcde"))
     print("Exercise9_output:", group_by_first_letter(["apple", "banana", "avocado", "blueberry", "cherry"]))
     print("Exercise10_output:", word_counter("the cat sat on the mat the cat"))
+    print("Exercise11_output:", two_sum([2, 7, 11, 15], 9))
+    print("Exercise11b_output:", two_sum_hash([2, 7, 11, 15], 9))
 
 
 
