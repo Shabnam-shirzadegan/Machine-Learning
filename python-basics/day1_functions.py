@@ -157,6 +157,14 @@ def fizzbuzz(n):
                result.append(value)
      return result
 
+# ---- Exercise 14: Flatten a nested list ----
+def flatter(nums):
+     flatten_list = []
+     for i in range(len(nums)):
+          for j in range(len(nums[i])):
+               flatten_list.append(nums[i][j])
+     return flatten_list
+
 
 
 
@@ -179,6 +187,7 @@ if __name__ == "__main__":
     print("Exercise11b_output:", two_sum_hash([2, 7, 11, 15], 9))
     print("Exercise12_output:", most_frequent([1, 3, 2, 3, 4, 3, 2]))
     print("Exercise13_output:", fizzbuzz(15))
+    print("Exercise14_output:", flatter([[1, 2], [3, 4], [5, 6]]))
 
 
 
