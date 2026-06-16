@@ -89,15 +89,19 @@ def nonrepeated(s):
                if dict[key] == 1:
                     return key
      
-     
+ # ---- Exercise 9: Group words by their first letter ----
+def group_by_first_letter(words):
+     dict = {}
+     for word in (words):
+           if word[0] in dict:
+                dict[word[0]].append(word)  
+           else:
+                dict[word[0]] = [word]
+     return dict
 
 
 
 
-
-
-
-     
 
 
 
@@ -114,6 +118,7 @@ if __name__ == "__main__":
     print("Exercise8b_output:", duplicates_check([1, 2, 3, 4, 2]))
     print("Exercise8b_output:", duplicates_check([1, 2, 3, 4, 5]))
     print("Exercise8c_output:", nonrepeated("aabbcde"))
+    print("Exercise9_output:", group_by_first_letter(["apple", "banana", "avocado", "blueberry", "cherry"]))
 
 
 
