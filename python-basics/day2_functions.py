@@ -18,7 +18,9 @@ def flatter(l):
 def dict_maker(keys, values):
     return {key: value for key, value in zip(keys, values)}
 
-
+# ---- Exercise 6: List comprehension - word lengths ----
+def word_lengths(l):
+    return {word: len(word) for word in l}
 
 
 if __name__ == "__main__":
@@ -27,3 +29,4 @@ if __name__ == "__main__":
     print("Exercise3_output:", c_to_f([0, 20, 37, 100]))
     print("Exercise4_output:", flatter([[1, 2], [3, 4], [5, 6]]))
     print("Exercise5_output:", dict_maker(["name", "age", "city"], ["Shabnam", 36, "Vancouver"]))
+    print("Exercise6_output:", word_lengths(["hello", "world", "python"]))
