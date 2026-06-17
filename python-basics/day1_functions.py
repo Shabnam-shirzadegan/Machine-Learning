@@ -165,6 +165,38 @@ def flatter(nums):
                flatten_list.append(nums[i][j])
      return flatten_list
 
+# ---- Exercise 15: Remove duplicates from a list while keeping order ----
+def duplicates_remover(nums):
+     output_list = []
+     for number in nums:
+          if number not in output_list:
+               output_list.append(number)
+     return output_list
+
+# ---- Exercise 16: Merge two sorted lists into one sorted list ----
+def merger(l1,l2):
+    combined = l1 + l2
+    merged_list = sorted(combined)
+    return merged_list
+
+# ---- Exercise 17: Check if two strings are anagrams ----
+def anagram(s1, s2):
+    dict1 = {}
+    dict2 = {}
+    for i in range(len(s1)):
+         if s1[i] in dict1:
+              dict1[s1[i]] += 1
+         else:
+              dict1[s1[i]] = 1
+    for j in range(len(s2)):
+         if s2[j] in dict2:
+              dict2[s2[j]] += 1
+         else:
+              dict2[s2[j]] = 1
+    return dict1 == dict2
+
+         
+
 
 
 
@@ -177,7 +209,7 @@ if __name__ == "__main__":
     print("Exercise5_output:", palindrome("hello"))
     print("Exercise6_output:", common_elements([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
     print("Exercise7_output:", sort_ascending([5, 3, 8, 1, 9, 2]))
-    print("Exercise8_output:", count_char("hello"))
+    print("Exercise8_output:", count_char("helloworld"))
     print("Exercise8b_output:", duplicates_check([1, 2, 3, 4, 2]))
     print("Exercise8b_output:", duplicates_check([1, 2, 3, 4, 5]))
     print("Exercise8c_output:", nonrepeated("aabbcde"))
@@ -188,6 +220,11 @@ if __name__ == "__main__":
     print("Exercise12_output:", most_frequent([1, 3, 2, 3, 4, 3, 2]))
     print("Exercise13_output:", fizzbuzz(15))
     print("Exercise14_output:", flatter([[1, 2], [3, 4], [5, 6]]))
+    print("Exercise15_output:", duplicates_remover([3, 1, 4, 1, 5, 9, 2, 6, 5, 3]))
+    print("Exercise16_output:", merger([1, 3, 5, 7], [2, 4, 6, 8]))
+    print("Exercise17_output:", anagram("listen", "silent"))
+    print("Exercise17_output:", anagram("hello", "world"))
+
 
 
 
