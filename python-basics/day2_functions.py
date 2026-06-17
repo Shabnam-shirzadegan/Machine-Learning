@@ -22,6 +22,14 @@ def dict_maker(keys, values):
 def word_lengths(l):
     return {word: len(word) for word in l}
 
+# ---- Exercise 7: List comprehension - remove vowels from a string ----
+def no_vomwels(s):
+    vowels = "aeiou"
+    return "".join(letter for letter in s if letter not in vowels)
+
+
+
+
 
 if __name__ == "__main__":
     print("Exercise1_output:", squares([1, 2, 3, 4, 5]))
@@ -30,3 +38,4 @@ if __name__ == "__main__":
     print("Exercise4_output:", flatter([[1, 2], [3, 4], [5, 6]]))
     print("Exercise5_output:", dict_maker(["name", "age", "city"], ["Shabnam", 36, "Vancouver"]))
     print("Exercise6_output:", word_lengths(["hello", "world", "python"]))
+    print("Exercise7_output:", no_vomwels("hello world"))
