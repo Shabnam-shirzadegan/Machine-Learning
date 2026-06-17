@@ -195,10 +195,32 @@ def anagram(s1, s2):
               dict2[s2[j]] = 1
     return dict1 == dict2
 
-         
+# ---- Exercise 18: Find the second largest number in a list ----
+def second_largest(nums):
+     max = nums[0]
+     second_max = nums[0]
+     for i in range(len(nums)):
+          if max < nums[i]:
+               max = nums[i]
+     nums.remove(max)
+     for i in range(len(nums)):
+          if second_max < nums[i]:
+               second_max = nums[i]
+     return second_max
+#def second_largest(nums):
+    #nums = sorted(set(nums))
+    #return nums[-2]
+
+# ---- Exercise 19: Rotate a list by k positions ----
+def rotating(nums, k):
+     rotated_list = nums[k:] + nums[:k]
+     return rotated_list
 
 
 
+
+
+     
 
 if __name__ == "__main__":
     print("Exercise1_output:", average([10, 20, 30]))
@@ -224,6 +246,8 @@ if __name__ == "__main__":
     print("Exercise16_output:", merger([1, 3, 5, 7], [2, 4, 6, 8]))
     print("Exercise17_output:", anagram("listen", "silent"))
     print("Exercise17_output:", anagram("hello", "world"))
+    print("Exercise18_output:", second_largest([3, 1, 4, 1, 5, 9, 2, 6]))
+    print("Exercise19_output:", rotating([1, 2, 3, 4, 5],2))
 
 
 
