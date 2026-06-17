@@ -216,7 +216,16 @@ def rotating(nums, k):
      rotated_list = nums[k:] + nums[:k]
      return rotated_list
 
+# ---- Exercise 20: Find all pairs that sum to a target ----
+def all_two_sum(nums, target):
+     all_nums = []
+     for i in range(len(nums)-1):
+          for j in range(i+1, len(nums)):
+               if nums[i] + nums[j] == target:
+                    all_nums.append([nums[i] , nums[j]]) 
+     return all_nums
 
+           
 
 
 
@@ -248,6 +257,7 @@ if __name__ == "__main__":
     print("Exercise17_output:", anagram("hello", "world"))
     print("Exercise18_output:", second_largest([3, 1, 4, 1, 5, 9, 2, 6]))
     print("Exercise19_output:", rotating([1, 2, 3, 4, 5],2))
+    print("Exercise20_output:", all_two_sum([1, 2, 3, 4, 5, 6],7))
 
 
 
