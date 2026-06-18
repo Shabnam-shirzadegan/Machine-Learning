@@ -31,7 +31,14 @@ def no_vomwels(s):
 def multiplication_table(n):
     return [[i * j for j in range(1, n+1)] for i in range(1, n+1)]
     
+# ---- Exercise 9: List comprehension - find common elements using comprehension ----
+def common_elements(l1, l2):
+    return [i for i in l1 if i in l2]
 
+# ---- Exercise 10: List comprehension - count vowels in each word ----
+def vowels(l):
+    vowels="aeiou"
+    return {key: sum(1 for letter in key if letter in vowels) for key in l}
 
 
 if __name__ == "__main__":
@@ -43,3 +50,5 @@ if __name__ == "__main__":
     print("Exercise6_output:", word_lengths(["hello", "world", "python"]))
     print("Exercise7_output:", no_vomwels("hello world"))
     print("Exercise8_output:", multiplication_table(3))
+    print("Exercise9_output:", common_elements([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
+    print("Exercise10_output:", vowels(["hello", "world", "python"]))
