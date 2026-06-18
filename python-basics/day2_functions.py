@@ -53,6 +53,9 @@ def uppercase(l):
     vowels = "aeiou"
     return [word.upper() if word[0] in vowels else word for word in l ]
     
+# ---- Exercise 14: List comprehension - zip two lists into pairs ----
+def pair_lists (l1, l2):
+    return list (zip(l1, l2))
 
 
 
@@ -71,5 +74,6 @@ if __name__ == "__main__":
     print("Exercise11_output:", square_even_numbers([1, 2, 3, 4, 5, 6]))
     print("Exercise12_output:", replace([3, -1, 4, -1, 5, -9, 2, -6]))
     print("Exercise13_output:", uppercase(["apple", "banana", "orange", "grape"]))
+    print("Exercise14_output:", pair_lists([1, 2, 3], ["a", "b", "c"]))
 
 
