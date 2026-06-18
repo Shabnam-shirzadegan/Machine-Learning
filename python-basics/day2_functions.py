@@ -48,6 +48,11 @@ def square_even_numbers(nums):
 def replace(nums):
     return [0 if num < 0 else num for num in nums]
 
+# ---- Exercise 13: List comprehension - uppercase words that start with a vowel ----
+def uppercase(l):
+    vowels = "aeiou"
+    return [word.upper() if word[0] in vowels else word for word in l ]
+    
 
 
 
@@ -65,4 +70,6 @@ if __name__ == "__main__":
     print("Exercise10_output:", vowels(["hello", "world", "python"]))
     print("Exercise11_output:", square_even_numbers([1, 2, 3, 4, 5, 6]))
     print("Exercise12_output:", replace([3, -1, 4, -1, 5, -9, 2, -6]))
+    print("Exercise13_output:", uppercase(["apple", "banana", "orange", "grape"]))
+
 
