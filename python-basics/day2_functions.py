@@ -27,7 +27,10 @@ def no_vomwels(s):
     vowels = "aeiou"
     return "".join(letter for letter in s if letter not in vowels)
 
-
+# ---- Exercise 8: List comprehension - nested multiplication table ----
+def multiplication_table(n):
+    return [[i * j for j in range(1, n+1)] for i in range(1, n+1)]
+    
 
 
 
@@ -39,3 +42,4 @@ if __name__ == "__main__":
     print("Exercise5_output:", dict_maker(["name", "age", "city"], ["Shabnam", 36, "Vancouver"]))
     print("Exercise6_output:", word_lengths(["hello", "world", "python"]))
     print("Exercise7_output:", no_vomwels("hello world"))
+    print("Exercise8_output:", multiplication_table(3))
