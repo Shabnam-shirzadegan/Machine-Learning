@@ -57,6 +57,15 @@ def uppercase(l):
 def pair_lists (l1, l2):
     return list (zip(l1, l2))
 
+# ---- Exercise 15: List comprehension - group numbers as even or odd ----
+def group_numbers(nums):
+    dict =  {"even": [], "odd": []}
+    for num in nums:
+        if num % 2 == 0:
+            dict["even"].append(num)
+        else:
+            dict["odd"].append(num)
+    return dict
 
 
 
@@ -75,5 +84,6 @@ if __name__ == "__main__":
     print("Exercise12_output:", replace([3, -1, 4, -1, 5, -9, 2, -6]))
     print("Exercise13_output:", uppercase(["apple", "banana", "orange", "grape"]))
     print("Exercise14_output:", pair_lists([1, 2, 3], ["a", "b", "c"]))
+    print("Exercise15_output:", group_numbers([1, 2, 3, 4, 5, 6]))
 
 
