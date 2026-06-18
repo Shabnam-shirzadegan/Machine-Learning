@@ -40,6 +40,17 @@ def vowels(l):
     vowels="aeiou"
     return {key: sum(1 for letter in key if letter in vowels) for key in l}
 
+# ---- Exercise 11: List comprehension - square of even numbers only ----
+def square_even_numbers(nums):
+    return [num**2 for num in nums if num % 2 == 0]
+
+# ---- Exercise 12: List comprehension - replace negative numbers with zero ----
+def replace(nums):
+    return [0 if num < 0 else num for num in nums]
+
+
+
+
 
 if __name__ == "__main__":
     print("Exercise1_output:", squares([1, 2, 3, 4, 5]))
@@ -52,3 +63,6 @@ if __name__ == "__main__":
     print("Exercise8_output:", multiplication_table(3))
     print("Exercise9_output:", common_elements([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
     print("Exercise10_output:", vowels(["hello", "world", "python"]))
+    print("Exercise11_output:", square_even_numbers([1, 2, 3, 4, 5, 6]))
+    print("Exercise12_output:", replace([3, -1, 4, -1, 5, -9, 2, -6]))
+
