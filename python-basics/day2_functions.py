@@ -67,6 +67,12 @@ def group_numbers(nums):
             dict["odd"].append(num)
     return dict
 
+# ---- Exercise 16: List comprehension - transpose a matrix ----
+def transpose(matrix):
+    return [list(row) for row in zip(*matrix)]
+
+
+
 
 
 if __name__ == "__main__":
@@ -85,5 +91,6 @@ if __name__ == "__main__":
     print("Exercise13_output:", uppercase(["apple", "banana", "orange", "grape"]))
     print("Exercise14_output:", pair_lists([1, 2, 3], ["a", "b", "c"]))
     print("Exercise15_output:", group_numbers([1, 2, 3, 4, 5, 6]))
+    print("Exercise16_output:", transpose([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
 
 
