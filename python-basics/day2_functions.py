@@ -87,6 +87,9 @@ def word_frequency(words):
 def invert_dict(d):
     return {value: key for key, value in d.items()}
 
+# ---- Exercise 21: Dictionary comprehension - filter dictionary by value ----
+def filter_by_value(d, threshold):
+    return {key: value for key, value in d.items() if value > threshold}
 
 if __name__ == "__main__":
     print("Exercise1_output:", squares([1, 2, 3, 4, 5]))
@@ -109,5 +112,6 @@ if __name__ == "__main__":
     print("Exercise18_output:", dedupe_flatten([[1, 2, 3], [3, 4], [4, 5, 1]]))
     print("Exercise19_output:", word_frequency(["cat", "dog", "cat", "bird", "dog", "cat"]))
     print("Exercise20_output:", invert_dict({"a": 1, "b": 2, "c": 3}))
+    print("Exercise21_output:", filter_by_value({"a": 10, "b": 25, "c": 5, "d": 30}, 10))
 
 
