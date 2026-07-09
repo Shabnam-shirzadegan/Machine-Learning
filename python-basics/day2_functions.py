@@ -71,8 +71,10 @@ def group_numbers(nums):
 def transpose(matrix):
     return [list(row) for row in zip(*matrix)]
 
-
-
+# ---- Exercise 17: List comprehension - prime numbers ----
+def is_prime(nums):
+    return [number for number in nums if number > 1 and all(number % d != 0 for d in range(2, number))]
+ 
 
 
 if __name__ == "__main__":
@@ -92,5 +94,6 @@ if __name__ == "__main__":
     print("Exercise14_output:", pair_lists([1, 2, 3], ["a", "b", "c"]))
     print("Exercise15_output:", group_numbers([1, 2, 3, 4, 5, 6]))
     print("Exercise16_output:", transpose([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
+    print("Exercise17_output:", is_prime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 17]))
 
 
