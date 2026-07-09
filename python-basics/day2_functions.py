@@ -79,7 +79,13 @@ def is_prime(nums):
 def dedupe_flatten(l):
     return sorted({item for sublist in l for item in sublist})
 
+# ---- Exercise 19: Dictionary comprehension - word frequency count ----
+def word_frequency(words):
+    return {key : sum(1 for item in words if item == key) for key in words}
 
+# ---- Exercise 20: Dictionary comprehension - invert a dictionary ----
+def invert_dict(d):
+    return {value: key for key, value in d.items()}
 
 
 if __name__ == "__main__":
@@ -101,5 +107,7 @@ if __name__ == "__main__":
     print("Exercise16_output:", transpose([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
     print("Exercise17_output:", is_prime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 17]))
     print("Exercise18_output:", dedupe_flatten([[1, 2, 3], [3, 4], [4, 5, 1]]))
+    print("Exercise19_output:", word_frequency(["cat", "dog", "cat", "bird", "dog", "cat"]))
+    print("Exercise20_output:", invert_dict({"a": 1, "b": 2, "c": 3}))
 
 
