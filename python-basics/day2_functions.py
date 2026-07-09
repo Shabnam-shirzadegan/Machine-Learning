@@ -74,7 +74,12 @@ def transpose(matrix):
 # ---- Exercise 17: List comprehension - prime numbers ----
 def is_prime(nums):
     return [number for number in nums if number > 1 and all(number % d != 0 for d in range(2, number))]
- 
+
+# ---- Exercise 18: List comprehension - flatten and deduplicate ----
+def dedupe_flatten(l):
+    return sorted({item for sublist in l for item in sublist})
+
+
 
 
 if __name__ == "__main__":
@@ -95,5 +100,6 @@ if __name__ == "__main__":
     print("Exercise15_output:", group_numbers([1, 2, 3, 4, 5, 6]))
     print("Exercise16_output:", transpose([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
     print("Exercise17_output:", is_prime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 17]))
+    print("Exercise18_output:", dedupe_flatten([[1, 2, 3], [3, 4], [4, 5, 1]]))
 
 
