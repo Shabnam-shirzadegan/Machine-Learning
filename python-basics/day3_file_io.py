@@ -1,5 +1,6 @@
 import csv 
 print("CSV imported successfully")
+import json
 
 def write_word(filename):
     with open(filename, "w") as f:
@@ -59,6 +60,15 @@ def read_csv_file(filename):
         for row in reader:
             print(row)
 
+# ---- Exercise 8: JSON - write data to a JSON file ----
+def write_json(filename, data):
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
+
+    
+
+
+
 
 
 if __name__ == "__main__":
@@ -71,6 +81,10 @@ if __name__ == "__main__":
     print(safe_read_lines("missing.txt"))
     write_csv_file("water_data.csv")
     read_csv_file("water_data.csv")
-
+    water_sample = {
+    "location": "River",
+    "bacteria_count": 12
+    }
+    write_json("water_sample.json", water_sample)
 
     
