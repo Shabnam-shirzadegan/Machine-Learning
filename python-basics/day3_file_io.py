@@ -33,6 +33,17 @@ def count_words(filename):
             counter += len(words)
         return counter 
 
+# ---- Exercise 5: Exceptions - safely read a file ----
+def safe_read_lines(filename):
+    try:
+        return read_lines(filename)
+    except FileNotFoundError:
+        print("The file was not found.")
+        return []
+
+
+
+
 if __name__ == "__main__":
     write_word("output0.txt", "Hello")
     write_lines("output.txt", ["hello", "world", "python"])
@@ -40,4 +51,7 @@ if __name__ == "__main__":
     append_line("output.txt", "new line")
     print(read_lines("output.txt"))
     print("Word count:", count_words("output.txt"))
-    print(read_lines("missing.txt"))
+    print(safe_read_lines("missing.txt"))
+
+
+    
