@@ -65,7 +65,32 @@ def write_json(filename, data):
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
 
+# ---- Exercise 9: JSON - read data from a JSON file ----
+def read_json(filename):
+    with open(filename, "r") as f:
+        data = json.load(f)
+
+    return data
+
+# ---- Exercise 10: JSON - safely read a JSON file ----
+def safe_read_json(filename):
+    try:
+        return read_json(filename)
+    except FileNotFoundError:
+        print("The JSON file was not found.")
+        return {}
+
+# ---- Exercise 11: JSON - write a list of dictionaries ----
+water_samples = [
+    {"location": "River", "bacteria_count": 12},
+    {"location": "Lake", "bacteria_count": 25},
+    {"location": "Beach", "bacteria_count": 8}
+]
+
+write_json("water_samples.json", water_samples)
+
     
+         
 
 
 
@@ -86,5 +111,8 @@ if __name__ == "__main__":
     "bacteria_count": 12
     }
     write_json("water_sample.json", water_sample)
-
-    
+    loaded_sample = read_json("water_sample.json")
+    print(loaded_sample)
+    print(loaded_sample["location"])
+    print(safe_read_json("water_sample.json"))
+    print(safe_read_json("missing.json"))

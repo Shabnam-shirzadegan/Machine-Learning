@@ -1,0 +1,14 @@
+[
+    {
+        "location": "River",
+        "bacteria_count": 12
+    },
+    {
+        "location": "Lake",
+        "bacteria_count": 25
+    },
+    {
+        "location": "Beach",
+        "bacteria_count": 8
+    }
+]
