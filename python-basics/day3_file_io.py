@@ -79,6 +79,9 @@ def safe_read_json(filename):
     except FileNotFoundError:
         print("The JSON file was not found.")
         return {}
+    except json.JSONDecodeError:
+        print("The JSON file contains invalid data.")
+        return {}
 
 # ---- Exercise 11: JSON - write a list of dictionaries ----
 water_samples = [
