@@ -1,4 +1,7 @@
-def write_word(filename, word):
+import csv 
+print("CSV imported successfully")
+
+def write_word(filename):
     with open(filename, "w") as f:
         f.write("Hello\n")
         f.write("World")
@@ -41,17 +44,33 @@ def safe_read_lines(filename):
         print("The file was not found.")
         return []
 
+# ---- Exercise 6: CSV - read data from a CSV file ----
+def write_csv_file(filename):
+    with open(filename, "w") as f:
+        f.write("location,bacteria_count\n")
+        f.write("River,12\n")
+        f.write("Lake,25\n")
+        f.write("Beach,8")
+
+# ---- Exercise 7: CSV - read rows from a CSV file ----
+def read_csv_file(filename):
+    with open(filename, "r") as f:
+        reader = csv.reader(f)
+        for row in reader:
+            print(row)
 
 
 
 if __name__ == "__main__":
-    write_word("output0.txt", "Hello")
+    write_word("output0.txt")
     write_lines("output.txt", ["hello", "world", "python"])
     print(read_lines("output.txt"))
     append_line("output.txt", "new line")
     print(read_lines("output.txt"))
     print("Word count:", count_words("output.txt"))
     print(safe_read_lines("missing.txt"))
+    write_csv_file("water_data.csv")
+    read_csv_file("water_data.csv")
 
 
     
